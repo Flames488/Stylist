@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
   <title>Fica Braids | Braiding in Downtown Toronto</title>
   <meta name="description" content="Discover neat, long-lasting braids with Fica Braids in Downtown Toronto. Explore cornrows, knotless braids, boho braids, crochet braids and faux locs.">
   <meta name="theme-color" content="#f8f4ed">
@@ -19,6 +19,44 @@
     @media(max-width:900px){.wrap{width:min(100% - 32px,680px)}.nav{height:70px}.nav-links{gap:15px}.brand{min-width:unset}.hero-grid{min-height:440px;gap:10px}.hero-image{height:440px}.service-grid{grid-template-columns:repeat(3,1fr)}.service-card img{height:190px}.gallery-grid{grid-auto-rows:145px}.about-panel{gap:24px}.about-copy{padding:25px 22px 25px 0}.contact-panel{grid-template-columns:1fr 1fr}}
     @media(max-width:640px){.service-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.service-card img{height:165px}.gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:150px;gap:10px}.gallery-item.tall{grid-row:span 2}.gallery-item.wide{grid-column:span 2}.gallery-cta{min-width:0;overflow:hidden}.gallery-cta span{overflow-wrap:anywhere}.wrap{width:calc(100% - 30px)}.topbar{font-size:.68rem}.nav{height:66px}.brand img{width:42px;height:42px}.brand-name{font-size:.88rem}.menu-toggle{display:block}.nav-links{display:none;position:absolute;top:66px;left:0;right:0;background:var(--cream);padding:18px 22px 22px;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:14px}.nav-links.open{display:flex}.nav-links .btn{width:100%}.hero-grid{display:flex;flex-direction:column;gap:0;min-height:unset}.hero-copy{padding:45px 0 24px}.hero-copy .intro{font-size:.98rem}.hero-image{height:340px;width:100%;margin:0;border-radius:130px 130px 0 0;max-width:440px;align-self:center}.hero-note{right:6%;bottom:10%;font-size:1.1rem}.trust{font-size:.78rem;line-height:1.8}.section{padding:54px 0}.section-head{margin-bottom:24px}.service-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.service-card img{height:160px}.service-content{padding:14px 12px}.service-content h3{font-size:1.12rem}.service-content p{font-size:.8rem;min-height:48px}.gallery-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:155px;gap:10px}.gallery-item.tall{grid-row:span 2}.gallery-item.wide{grid-column:span 2}.gallery-cta{min-height:155px}.about-panel{grid-template-columns:1fr;gap:0}.about-panel img{min-height:230px;height:250px}.about-copy{padding:24px}.stats{gap:20px}.stat strong{font-size:1.4rem}.booking-panel{padding:24px 18px}.steps{grid-template-columns:1fr;gap:20px}.step{gap:13px}.policy{text-align:left}.reviews{grid-template-columns:1fr}.review{padding:20px}.contact-panel{grid-template-columns:1fr;padding:23px 18px}.map-placeholder{min-height:210px}.footer-inner{align-items:flex-start;flex-direction:column}.footer-links{gap:13px}.sticky-book{display:block}.footer{padding-bottom:100px}h1{font-size:clamp(2.5rem,11vw,3.5rem)}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}.fade-in{opacity:1;transform:none}}
+  
+    /* Mobile-first hardening: prevent horizontal overflow and keep all media inside its cards. */
+    *,*::before,*::after{box-sizing:border-box}
+    html{width:100%;max-width:100%;overflow-x:clip;scroll-padding-top:76px;-webkit-text-size-adjust:100%}
+    body{width:100%;max-width:100%;margin:0;overflow-x:clip}
+    img,video,svg,canvas{max-width:100%;height:auto}
+    img{display:block}
+    .wrap{max-width:100%;min-width:0}
+    .section,.header,main,footer,.hero,.hero-grid,.hero-copy,.service-grid,.service-card,.gallery-grid,.gallery-item,.about-panel,.about-copy,.booking-panel,.contact-panel,.contact-panel>*{min-width:0}
+    h1,h2,h3,p,a,button,small,span{overflow-wrap:break-word}
+    button,a,input,select,textarea{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
+    a,button{max-width:100%}
+    .service-card img,.gallery-item img,.about-panel img{width:100%;object-fit:cover;object-position:center;max-width:100%}
+    .service-card,.gallery-item{overflow:hidden}
+    .gallery-item img{height:100%;min-height:0}
+    .hero-image{max-width:100%;object-fit:cover;object-position:center}
+    .nav{position:relative;min-width:0}
+    .nav-links{z-index:40;max-width:100%;max-height:calc(100dvh - 76px);overflow-y:auto}
+    .btn,.contact-buttons a{min-height:44px;display:inline-flex;align-items:center;justify-content:center;text-align:center;white-space:normal}
+    .contact-buttons a{flex:0 1 auto}
+    .lightbox{padding:max(12px,env(safe-area-inset-top)) 12px max(12px,env(safe-area-inset-bottom))}
+    .lightbox img{width:auto;height:auto;max-width:100%;max-height:calc(100dvh - 90px);object-fit:contain}
+    @media(max-width:900px){.wrap{width:calc(100% - 32px)}.hero-grid,.about-panel,.contact-panel{min-width:0}.service-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+    @media(max-width:640px){
+      .wrap{width:calc(100% - 28px)}
+      .topbar{padding:8px 12px;line-height:1.45;text-align:center;white-space:normal}
+      .header{max-width:100%}.nav{gap:10px}.brand{flex:1;min-width:0;max-width:calc(100% - 54px)}.brand img{flex:0 0 auto;object-fit:contain}.brand-name{min-width:0;overflow-wrap:anywhere}.menu-toggle{flex:0 0 44px;width:44px;height:44px;display:grid;place-items:center}
+      .nav-links{left:0;right:0;padding:16px;gap:12px}
+      .hero-copy{width:100%;padding:36px 0 22px}.hero-copy h1{font-size:clamp(2rem,9vw,3.2rem);line-height:1.08;letter-spacing:-.035em;overflow-wrap:normal}.hero-copy .intro{line-height:1.65}.hero-image{width:100%;height:clamp(260px,82vw,390px);border-radius:clamp(80px,28vw,130px) clamp(80px,28vw,130px) 0 0}
+      .trust{display:flex;flex-wrap:wrap;gap:6px 12px}.section{padding:44px 0}.section-head h2,.about-copy h2,.contact-panel h2{font-size:clamp(1.7rem,7vw,2.35rem);line-height:1.15}.section-head p{line-height:1.6}
+      .service-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.service-card img{width:100%;height:clamp(135px,43vw,210px);object-fit:cover;object-position:center}.service-content{padding:12px 10px}.service-content h3{font-size:clamp(.95rem,4vw,1.12rem);line-height:1.25}.service-content p{font-size:.82rem;line-height:1.5;min-height:0}.service-content .btn{width:100%;padding:11px 8px;font-size:.82rem}
+      .gallery-grid{grid-template-columns:repeat(2,minmax(0,1fr));grid-auto-rows:clamp(130px,42vw,190px);gap:9px}.gallery-item{min-width:0;min-height:0}.gallery-item img{width:100%;height:100%;object-fit:cover;object-position:center}.gallery-item.wide{grid-column:span 2}.gallery-item.tall{grid-row:span 2}.gallery-cta{min-width:0;min-height:100%;padding:14px;display:flex;flex-direction:column;justify-content:center;align-items:flex-start}.gallery-cta span{max-width:100%;overflow-wrap:anywhere}
+      .about-panel img{width:100%;height:clamp(220px,65vw,320px);min-height:0;object-fit:cover}.about-copy{padding:22px 18px}.stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.stat{min-width:0}
+      .booking-panel{padding:22px 16px}.steps{grid-template-columns:minmax(0,1fr)}.step p{line-height:1.55}.reviews{grid-template-columns:minmax(0,1fr)}.contact-panel{grid-template-columns:minmax(0,1fr);gap:20px;padding:20px 15px}.contact-buttons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}.contact-buttons a{width:100%;min-width:0;padding:10px 8px;overflow-wrap:anywhere}.map-placeholder{width:100%;min-width:0}.footer-inner{gap:16px}.footer-links{max-width:100%;row-gap:10px}.sticky-book{padding-left:14px;padding-right:14px}.sticky-book .btn{width:100%;min-height:48px}
+    }
+    @media(max-width:360px){.wrap{width:calc(100% - 22px)}.brand-name{font-size:.8rem}.service-grid{gap:8px}.service-card img{height:130px}.service-content{padding:10px 8px}.service-content h3{font-size:.92rem}.service-content p{font-size:.76rem}.gallery-grid{gap:7px;grid-auto-rows:128px}.contact-buttons{grid-template-columns:minmax(0,1fr)}.hero-copy h1{font-size:clamp(1.9rem,9vw,2.5rem)}}
+    @media(orientation:landscape) and (max-height:500px) and (max-width:900px){.nav-links{max-height:calc(100dvh - 70px)}.hero-grid{display:grid;grid-template-columns:1fr 1fr;align-items:center}.hero-image{height:70vh;min-height:230px;border-radius:100px 100px 0 0}.hero-copy{padding:24px 0}}
+
   </style>
   <script type="application/ld+json">
   {
